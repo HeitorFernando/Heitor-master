@@ -12,9 +12,9 @@ package heito1;
 public class PerguntaBinaria extends Pergunta {
     private boolean resposta;
 
-    public PerguntaBinaria(boolean resposta, String descricao) {
+    public PerguntaBinaria(boolean respostas, String descricao) {
         super(descricao);
-        this.resposta = resposta;
+        this.resposta = respostas;
     }
 
     @Override
