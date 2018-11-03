@@ -5,6 +5,8 @@
  */
 package heitor;
 
+import java.util.Arrays;
+
 /**
  *
  * @author User
@@ -44,7 +46,7 @@ public class GradeDeHorarios {
 
     @Override
     public String toString() {
-        return "GradeDeHorarios{" + "matrizHotario=" + matrizHotario + '}';
+        return "GradeDeHorarios{" + "matrizHotario=" + Arrays.deepToString(matrizHotario) + '}';
     }
     
     
