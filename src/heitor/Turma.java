@@ -6,6 +6,8 @@
 package heitor;
 
 
+
+
 /**
  *
  * @author User
@@ -19,6 +21,10 @@ public class Turma {
         this.identificador = identificador;
         this.anoDeOferta = anoDeOferta;
         this.gradeDeHorarios = gradeDeHorarios;
+    }
+    public Turma(String identificador) {
+        this.identificador = identificador;
+        this.gradeDeHorarios = new GradeDeHorarios();
     }
 
     public GradeDeHorarios getGradeDeHorarios() {

@@ -13,11 +13,11 @@ public class Docente {
     private String nome;
     private String apelido;
     private String email;
-    private int matricula;
+    private String matricula;
     private String areaDeLotacao;
     private String vinculo;
 
-    public Docente(String nome, String apelido, String email, int matricula, String areaDeLotacao, String vinculo) {
+    public Docente(String nome, String apelido, String email, String matricula, String areaDeLotacao, String vinculo) {
         this.nome = nome;
         this.apelido = apelido;
         this.email = email;
@@ -54,11 +54,11 @@ public class Docente {
         this.email = email;
     }
 
-    public int getMatricula() {
+    public String getMatricula() {
         return matricula;
     }
 
-    public void setMatricula(int matricula) {
+    public void setMatricula(String matricula) {
         this.matricula = matricula;
     }
 

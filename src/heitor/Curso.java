@@ -13,7 +13,7 @@ import java.util.List;
  * @author User
  */
 public class Curso {
-    private int cod_Curso;
+    private String cod_Curso;
     private String descricao;
     private int duracao;
     //conjunto de Docentes
@@ -22,14 +22,25 @@ public class Curso {
     private List<Disciplina> disciplinas;
     //conjunto de Turmas
     private List<Turma> turmas;
+    //conjunto de Laboratórios
+    private List<Laboratorio> lab;
 
-    public Curso(int cod_Curso, String descricao, int duracao, List professores, List disciplinas, List turmas) {
+    public List<Laboratorio> getLab() {
+        return lab;
+    }
+
+    public void setLab(List<Laboratorio> lab) {
+        this.lab = lab;
+    }
+
+    public Curso(String cod_Curso, String descricao, int duracao, List professores, List disciplinas, List turmas, List lab) {
         this.cod_Curso = cod_Curso;
         this.descricao = descricao;
         this.duracao = duracao;
         this.professores = professores;
         this.disciplinas = disciplinas;
         this.turmas = turmas;
+        this.lab = lab;
         
     }
     public Curso(String descricao) {
@@ -37,6 +48,7 @@ public class Curso {
         this.professores = new ArrayList();
         this.disciplinas = new ArrayList();
         this.turmas = new ArrayList();
+        this.lab = new ArrayList();
     }
 
     public List<Turma> getTurmas() {
@@ -55,11 +67,11 @@ public class Curso {
         this.professores = professores;
     }
 
-    public int getCod_Curso() {
+    public String getCod_Curso() {
         return cod_Curso;
     }
 
-    public void setCod_Curso(int cod_Curso) {
+    public void setCod_Curso(String cod_Curso) {
         this.cod_Curso = cod_Curso;
     }
 
@@ -95,6 +107,9 @@ public class Curso {
     //O método adiciona uma turma na lista de turmas do curso
     public void addTurma(Turma turma){
         this.turmas.add(turma);
+    }
+    public void addLab(Laboratorio l){
+        this.lab.add(l);
     }
 
     public List<Disciplina> getDisciplinas() {
